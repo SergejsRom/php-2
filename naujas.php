@@ -62,9 +62,9 @@ echo $r2 = rand(0, 2); echo '<br>';
 echo $r3 = rand(0, 2); echo '<br>';
 echo $r4 = rand(0, 2); echo '<br>';
 echo $r_all = "$r1 $r2 $r3 $r4"; echo '<br>';
-echo substr_count($r_all,'0'), 'nuliu'; echo '<br>';
-echo substr_count($r_all, '1'), 'vienetu'; echo '<br>';
-echo substr_count($r_all, '2'), 'dvejatu'; echo '<br>';
+echo substr_count($r_all,'0'), ' nuliu'; echo '<br>';
+echo substr_count($r_all, '1'), ' vienetu'; echo '<br>';
+echo substr_count($r_all, '2'), ' dvejatu'; echo '<br>';
 ?> 
 <h3>Sestas uzd.</h3>
 <?php
@@ -85,3 +85,19 @@ elseif ($spalva > 0) echo "<h3 style= color:blue>$spalva</h3>";
 ?> 
 <h3>Astuntas uzd.</h3>
 <?php
+echo $zvakiu_kiekis = rand(5, 3000), ' viso zvakiu'; echo '<br>';
+echo $zvakiu_kaina = 1, ' eur uz vnt';  echo '<br>';
+$viso_eur = $zvakiu_kiekis * $zvakiu_kaina;
+if ($viso_eur <= 1000)
+echo $viso_eur, ' eur uz visas';
+elseif ($viso_eur > 1000) 
+echo round(($viso_eur - $viso_eur * 0.03), 2), ' eur uz visas';
+elseif (($viso_eur > 2000))
+echo round(($viso_eur - $viso_eur * 0.04), 2), ' eur uz visas';
+?> 
+<h3>Devintas uzd.</h3>
+<?php
+echo $m1 = rand(0, 100); echo '<br>';
+echo $m2 = rand(0, 100); echo '<br>';
+echo $m3 = rand(0, 100); echo '<br>';
+echo $vidurkis = 'vidurkis ', round(($m1 + $m2+ $m3) / 3); echo '<br>';
