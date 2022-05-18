@@ -1,12 +1,12 @@
-function Hello() {
+function Hello({spalva, dydis, skaicius}) {
 
     return (
         <h1 style={
             {
-                color: 'blue',
-                fontSize: 70
+                color: spalva,
+                fontSize: dydis * 1.5 + 'px',
             }
-        }>Hello</h1>
+        }>Hello {skaicius + 11}</h1>
         
         )
 }

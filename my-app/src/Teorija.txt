@@ -9,7 +9,10 @@ taip ir sukuriam components folderi src folderyje
 
 
 
-Propsas
+PROPSAS
+
+Yra kintamasis kuris perduodamas komponentui.
+Gali buti bet kas.
 
 
 
