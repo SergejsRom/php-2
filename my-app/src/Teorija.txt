@@ -1,0 +1,18 @@
+KOMPONENTAS
+javascript finkcija, kuri grazina HTML
+
+Komponentas TURI prasideti DYDZIAJA raide
+
+Komponentus dedami i atskirus faulus, del tvarkos
+taip ir sukuriam components folderi src folderyje
+
+
+
+
+Propsas
+
+
+
+
+
+Steitas
