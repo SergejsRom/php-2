@@ -18,4 +18,12 @@ Gali buti bet kas.
 
 
 
-Steitas
+Steitas STATE
+State yra masyvas
+
+Map eina per masyva kiek yra elementu
+
+
+
+Kai MAP'inam, privalomai reikia perduoti KEY
+cats.map(cat => <div key={cat}>{cat}</div>)
