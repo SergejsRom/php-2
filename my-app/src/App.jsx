@@ -1,61 +1,101 @@
-
-import { useState } from 'react';
-import './App.css';
-import randColor from './Function/randColor';
-
-const cats = ['Pilkis', 'Rainis', 'Murkis'];
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  {
+    /* Sukurti aplikaciją, kuri turi mygtuką change ir atvaizduoja apskritimą. Paspaudus mygtuką change apskritimas turi pavirsti į kvadratą, o paspaudus dar kartą vėl pavirsti apskritimu.
+     */
+  }
+  const [kvadratas, setKvadratas] = useState("kvadratas");
+  function change() {
+    setKvadratas(kvadratas === "apskritimas" ? "kvadratas" : "apskritimas");
+  }
 
-    const [spalva, setSpalva] = useState('green');
+  {
+    /* Sukurti aplikaciją, kuri turi mygtukus change ir random bei atvaizduoja apskritimą su random skaičiumi viduje. Paspaudus change mygtuką apskritimas keičiasi į stačiakampį kaip pirmame uždavinyje, o paspaudus random mygtuką, skaičius pasikeičia į rand 5 - 25
+     */
+  }
 
-    const stebuklas = (a) => {
-        console.log('stebuklas stebukle ' + a);
-        
-    }
+  const [kvadratas2, setKvadratas2] = useState("kvadratas");
+  function change2() {
+    setKvadratas2(kvadratas2 === "apskritimas" ? "kvadratas" : "apskritimas");
+  }
+  const [sk, setSk] = useState(Math.floor(Math.random() * (25 - 5 + 1)) + 5);
+  function skaicius() {
+    setSk(Math.floor(Math.random() * (25 - 5 + 1)) + 5);
+  }
 
-    const stebuklas2 = () => {
-        console.log('stebuklas stebukle');
+  {
+    /* Sukurti aplikaciją, kuri turi mygtukus plus ir minus, bei atvaizduoja skaičių 0. Paspaudus plus mygtuką, skaičius padidėja 1, o paspaudus minus- sumažėja 3
+     */
+  }
 
-        //const newColor = spalva === 'red' ? 'green' : 'red';
+  const [nulis, setNulis] = useState(0);
+  function plius() {
+    setNulis(nulis + 1);
+  }
+  function minus() {
+    setNulis(nulis - 3);
+  }
 
+  {
+    /* Sukurti aplikaciją, kuri turi mygtukus add red, add blue ir reset. Paspaudus add red, prisideda raudonas kvadratas, paspaudus add blue - mėlynas ir t.t. Spaudinėjant prisideda vis daygiau kvadratų. Paspaudus reset viskas išsitrina */
+  }
 
-        setSpalva((oldColor) => oldColor === 'crimson' ? 'skyblue' : 'crimson');
-        console.log(spalva);
-    }
-    // prideti skaiciu
-    const [plus, setPlus] = useState(1);
-    const prideti = () => {
-        setPlus(n => n + 1)
-    }
-    // prideti kvadrata
-    const addKv = () => setKv(kvM => [...kvM, randColor()]);
-    const [kv, setKv] = useState([]);
+  const addRed = () => setRed(kvM => [...kvM, '']);
+    const [red, setRed] = useState([]);
 
-    const remKv = () => setKv(kvM => kvM.slice(2))
+    const addBlue = () => setBlue(kvM => [...kvM, '']);
+    const [blue, setBlue] = useState([]);
+
   return (
     <div className="App">
       <header className="App-header">
-       <h1 style={{color: spalva}}>State</h1>
+        <div className={kvadratas}></div>
+        <button onClick={change}>CHANGE</button>
 
-       <h1>{plus}</h1>
-       {
-           cats.map((cat, i) => <div key={i}>{cat}</div>)
+        <div className={kvadratas2}>{sk}</div>
+        <div>
+          <button className="btn" onClick={change2}>
+            FORMA
+          </button>
+          <button className="btn" onClick={skaicius}>
+            SKAICIUS
+          </button>
+        </div>
+        <br></br>
+        <br></br>
+
+        <div>
+          <button className="btn" onClick={minus}>
+            -
+          </button>
+          <span className="nulis">{nulis}</span>
+          <button className="btn" onClick={plius}>
+            +
+          </button>
+        </div>
+        <br></br>
+        <br></br>
+        <div>
+          <div className="kvadratai">
+          {
+           red.map((i) => <div key={i} className="kv">{i}</div>)
        }
-
-       <div className="kvc">
        {
-           kv.map((c, i) => <div key={i} className="kv" style={{background: c}}>{i}</div>)
+           blue.map((i) => <div key={i} className="kv" style={{background: "blue"}}>{i}</div>)
        }
-       </div>
-        
-
-        <button onClick={() => stebuklas('abra kadabra')}>Click SU PARAMETRU</button>
-        <button onClick={stebuklas2}>Click BE PARAMETRO</button>
-        <button onClick={prideti}>Prideti 1</button>
-        <button onClick={addKv}>ADD kvadrata 1</button>
-        <button onClick={remKv}>REMOVE kvadrata 1</button>
-
+          </div>
+          <button className="btn" onClick={addRed}>
+            ADD RED
+          </button>
+          <button className="btn" onClick={plius}>
+            RESET
+          </button>
+          <button className="btn" onClick={addBlue}>
+            ADD BLUE
+          </button>
+        </div>
       </header>
     </div>
   );
