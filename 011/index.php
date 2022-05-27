@@ -9,4 +9,8 @@ $cats = [
 
 $out = json_encode($cats);
 
+
+header('Content-Type: application/json');
+
+
 echo $out;

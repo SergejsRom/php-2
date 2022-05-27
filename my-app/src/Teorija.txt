@@ -27,3 +27,19 @@ Map eina per masyva kiek yra elementu
 
 Kai MAP'inam, privalomai reikia perduoti KEY
 cats.map(cat => <div key={cat}>{cat}</div>)
+
+4 PAGRINDINIAI REQUEST metodai CRUD (create, read, update, delete)
+
+Kad kažka gauti naudojame 
+GET metoda          
+
+Kad kažka duoti svetainei naudojame
+POST metoda
+
+Jeigu norime kažka ištrinti naudojame
+DELETE metoda
+
+Jeigu norime patedaguoti naudojame 
+PUT metoda
+
+PHP turi buti pradzia be jokiu tarpu ir tusciu eiluciu
