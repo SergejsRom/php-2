@@ -1,0 +1,3 @@
+Install axios kad galetumem kreiptis i kita serveri
+
+npm i axios
