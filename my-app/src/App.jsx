@@ -15,7 +15,8 @@ function App() {
     useEffect(() => {
         axios.get('http://localhost/php-2/011/index.php')
         .then(res => {
-            console.log(res.data);
+            console.log(res);
+            setCats(res.data);
         });
     }, []);
 
