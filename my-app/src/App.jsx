@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import axios from 'axios';
 
 function App() {
 
@@ -9,6 +10,13 @@ function App() {
     useEffect(() => {
         console.log('GO');
     
+    }, []);
+
+    useEffect(() => {
+        axios.get('http://localhost/php-2/011/index.php')
+        .then(res => {
+            console.log(res.data);
+        });
     }, []);
 
     return (
