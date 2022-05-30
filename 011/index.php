@@ -11,6 +11,8 @@ for($i = 0; $i < 20; $i++) {
     $cats[] = rand(9, 5);
 }
 
+//sleep(5);
+
 $out = json_encode($cats);
 
 
