@@ -5,7 +5,7 @@
 
 .baltas {
     display: inline-block;
-    color: white;
+    color: #aaa5a5;
     text-decoration: underline;
     font-weight: bold;
     padding: 50px;
@@ -17,7 +17,7 @@
     
 }
 .mygtukas {
-    background: blue;
+    background: #0000ff;
 }
 
 .mygtukas2 {
