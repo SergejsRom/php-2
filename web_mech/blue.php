@@ -1,6 +1,6 @@
 <?php
 if (isset($_GET['r'])) {
- header('Location: http://localhost/php-2/red.php');
+ header('Location: http://localhost/php-2/web_mech/red.php');
  die;
 }
 ?>
@@ -14,6 +14,6 @@ if (isset($_GET['r'])) {
     
 </head>
 <body style="background:blue;">
-<a href="http://localhost/php-2/blue.php?r=1">RED</a>
+<a href="http://localhost/php-2/web_mech/blue.php?r=1">RED</a>
 </body>
 </html>
