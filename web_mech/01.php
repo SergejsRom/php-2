@@ -11,7 +11,7 @@
 <?php
 if ($_GET['color'] == 1) {
     ?>
-    return raudonas
+    raudonas
     <?php
 }
 
@@ -20,9 +20,26 @@ if ($_GET['color'] == 1) {
 
 
 >
-    <a class="baltas" href="http://localhost/php-2/web_mech/01.php">BE GET</a>
+    <a class="baltas
+    <?php
+    if ($_GET['color'] == 1) {
+    ?>
+    mygtukas
+    <?php
+}
+
+?>" href="http://localhost/php-2/web_mech/01.php">BE GET</a>
     <br>
     <br>
-    <a class="baltas" href="http://localhost/php-2/web_mech/01.php?color=1">SU GET</a>
+    <a class="baltas
+    <?php
+    if ($_GET['color'] == null) {
+    ?>
+    mygtukas2
+    <?php
+}
+
+?>
+    " href="http://localhost/php-2/web_mech/01.php?color=1">SU GET</a>
 </body>
 </html>
