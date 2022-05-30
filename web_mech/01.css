@@ -1,0 +1,17 @@
+
+.juodas {
+    background-color: black;
+}
+
+.baltas {
+    display: inline-block;
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    padding: 50px;
+    margin: 20px;  
+}
+
+.raudonas {
+    background-color: red;
+}
