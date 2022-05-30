@@ -23,7 +23,7 @@ if ($sp !== null) {
     <br>
     <form action="" method="get">
 
-        <span class="baltas">Laukas spalvai:</span> <input type="text" name="spalva">
+        <span class="baltas">Iveskite spalvos koda:</span> <input type="text" name="spalva">
         <button type="submit">FONO SPALVA</button>
 
     </form>
