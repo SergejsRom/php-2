@@ -1,7 +1,10 @@
 
 <?php
+session_start();
 //scenarijus POST
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $_SESSION['bla'] = $_POST['tek'];
 
     header('Location: http://localhost/php-2/012/form.php');
     die;
@@ -22,10 +25,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>FORMMMM</title>
 </head>
 <body>
+
+<?php
+echo $_SESSION['bla'];
+?>
     
     <form action="" method="post">
 
-        Tavo tekstas: <input type="text">
+        Tavo tekstas: <input type="text" name="tek">
 
         <button type="submit">KNOPKE GO</button>
 
