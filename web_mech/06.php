@@ -1,18 +1,3 @@
-<?php
-if (isset($_GET['get'])) {
-    $spalva = "green";
-    
-   };
-   if (isset($_POST['post'])) {
-
-    $spalva = 'yellow';
-
-   }
-
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
